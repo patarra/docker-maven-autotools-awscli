@@ -1,4 +1,4 @@
-FROM maven:3.5.2-jdk-8-slim
+FROM maven:3-jdk-8-slim
 RUN apt-get update && apt-get install -y \
             autoconf \
             automake \
@@ -8,7 +8,9 @@ RUN apt-get update && apt-get install -y \
             python \
             git \
             jq \
-            make
+            make \
+            nodejs \
+            npm
 
 RUN curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 RUN unzip awscli-bundle.zip
