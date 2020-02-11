@@ -20,4 +20,5 @@ RUN chmod +x /usr/bin/mvn-version.sh
 COPY ecr-repo-uri.sh /usr/bin
 RUN chmod +x /usr/bin/ecr-repo-uri.sh
 RUN mkdir -p /mnt/code
+RUN npm install -g grunt
 WORKDIR /mnt/code
